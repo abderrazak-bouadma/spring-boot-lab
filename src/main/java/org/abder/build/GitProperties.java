@@ -27,10 +27,10 @@ public class GitProperties {
     private final String tags;
 
     @Inject
-    public GitProperties(@Value("git.branch") String branch,
-                         @Value("git.dirty") String dirty,
-                         @Value("git.remote.origin.url") String remoteOriginUrl,
-                         @Value("git.tags") String tags) {
+    public GitProperties(@Value("${git.branch}") String branch,
+                         @Value("${git.dirty}") String dirty,
+                         @Value("${git.remote.origin.url}") String remoteOriginUrl,
+                         @Value("${git.tags}") String tags) {
         this.branch = branch;
         this.dirty = dirty;
         this.remoteOriginUrl = remoteOriginUrl;
