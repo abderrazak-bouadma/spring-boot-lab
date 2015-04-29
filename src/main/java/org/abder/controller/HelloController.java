@@ -21,12 +21,7 @@ public class HelloController {
 
     @RequestMapping(value = "/hello/{name}", produces = MediaType.APPLICATION_JSON_VALUE)
     public String sayHello(@PathVariable String name) {
-        if (logger.isInfoEnabled())
-            logger.info("This is an info message");
-        if (logger.isDebugEnabled())
-            logger.debug("This is a debug message");
-        if (logger.isTraceEnabled())
-            logger.trace("This is a trace message");
+        logger.info("Logging the name {}" + name);
         return "Hello there " + name + " !";
     }
 }
